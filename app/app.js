@@ -1,12 +1,19 @@
-'use strict';
+angular.module('myApp', []).
+    controller('myCtrl', ['$scope', '$http', function ($scope, $http) {
 
-// Declare app level module which depends on views, and components
-angular.module('myApp', [
-  'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
-]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+        $scope.responseResult = "asd";
+
+        $scope.weatherFn = function () {
+
+            return $http.get('http://api.openweathermap.org/data/2.5/weather?q=Lviv&appid=49b8b1fcf024d0e19d6bd2bccb355119')
+                .success(function (data) {
+                    console.log(data);
+                    return data;
+                })
+                .error(function (err) {
+                    console.log(err);
+                    return err;
+                });
+        }
+
+    }]);

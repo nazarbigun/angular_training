@@ -4,12 +4,15 @@
     <title>My AngularJS App</title>
     <script src="bower_components/angular/angular.js"></script>
     <script src="app.js"></script>
+    <script src="services/weatherService.js"></script>
 </head>
 
 <body ng-controller="myCtrl">
 
 <h1>{{responseResult}}</h1>
 <button ng-click="weatherFn()">Button</button>
+<button ng-click="weatherService()">Service</button>
+<button ng-click="temps()">Service</button>
 
 </body>
 </html>

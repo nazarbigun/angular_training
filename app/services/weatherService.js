@@ -1,9 +1,6 @@
-/**
- * Created by Z on 06.03.2016.
- */
-angular.module("myApp")
-    .factory('forecastLviv', ['$http', function($http) {
-    return $http.get('http://api.openweathermap.org/data/2.5/weather?q=Lviv&appid=49b8b1fcf024d0e19d6bd2bccb355119')
+
+app.factory('forecastLviv', ['$http', function($http) {
+    return $http.get('http://api.openweathermap.org/data/2.5/weather?q=Lviv&appid=765caa5a8f1df6fdf73093a6f18535b6')
         .success(function(data) {
             return data;
         })
@@ -29,3 +26,4 @@ angular.module("myApp")
             return err;
         });
 }]);
+

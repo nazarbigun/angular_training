@@ -31,3 +31,5 @@ var app = angular.module('myApp', [])
 ////            return err;
 ////        });
 ////}]);;
+
+//todo: add propper API, clean mess of comments, make it pretty ;)

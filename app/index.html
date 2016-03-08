@@ -4,11 +4,13 @@
     <title>Weather app</title>
     <script src="bower_components/angular/angular.js"></script>
     <script src="app.js"></script>
+    <script src="controller/MainController.js"></script>
+    <script src="services/weatherService.js"></script>
 </head>
 
 <body ng-controller="MainController">
 
-<h1>{{responce}}</h1>
+<h1>{{responceforecastLviv}}</h1>
 <button ng-click="weatherFn()">Button</button>
 <div>{{cityName}}</div>
 </body>
